@@ -1,0 +1,30 @@
+
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.ChoiceBox?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+
+
+
+<?import java.net.URL?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="CENTER" >
+
+    <stylesheets>
+        <URL value="@/css/style.css"/>
+    </stylesheets>
+
+    <ImageView fx:id="avatar" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.rowSpan="2" fitWidth="80" fitHeight="80"></ImageView>
+    <Label fx:id="nickName" text="nickName" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="2"></Label>
+    <ChoiceBox fx:id="status" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="150" GridPane.columnSpan="2"></ChoiceBox>
+    <ListView fx:id="chatBox" GridPane.rowIndex="3" GridPane.columnIndex="0" prefWidth="770" GridPane.columnSpan="2" prefHeight="550"></ListView>
+    <ListView fx:id="userList" GridPane.rowIndex="3" GridPane.columnIndex="3" prefWidth="230" prefHeight="550" onMouseClicked="#addUserTochatField"></ListView>
+    <TextField fx:id="chatField" text="Enter text to chatting" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2" onMouseClicked="#clickChatField"></TextField>
+    <Button fx:id="sendButton" text="Send" prefWidth="150" GridPane.rowIndex="4" GridPane.columnIndex="3" onMouseClicked="#sendText"></Button>
+</GridPane>
